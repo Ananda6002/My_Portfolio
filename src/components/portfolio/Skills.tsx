@@ -18,10 +18,11 @@ export function Skills() {
                 {group.label}
               </h3>
               <div className="mt-4 flex flex-wrap gap-2">
-                {group.items.map((item) => (
+                {group.items.map((item, j) => (
                   <span
                     key={item}
-                    className="rounded-lg border border-border bg-secondary/60 px-3 py-1.5 text-sm transition-colors hover:border-primary/50 hover:text-primary"
+                    style={{ animationDelay: `${i * 90 + j * 45}ms` }}
+                    className="badge-hover rise-in rounded-lg border border-border bg-secondary/60 px-3 py-1.5 text-sm hover:border-primary/50 hover:text-primary"
                   >
                     {item}
                   </span>

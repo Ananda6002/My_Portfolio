@@ -15,8 +15,12 @@ export function About() {
         </Reveal>
         <Reveal delay={120}>
           <ul className="glass-panel space-y-3 rounded-2xl p-6">
-            {aboutHighlights.map((h) => (
-              <li key={h} className="flex items-center gap-3 text-sm">
+            {aboutHighlights.map((h, i) => (
+              <li
+                key={h}
+                style={{ animationDelay: `${200 + i * 90}ms` }}
+                className="rise-in flex items-center gap-3 text-sm"
+              >
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span className="min-w-0">{h}</span>
               </li>

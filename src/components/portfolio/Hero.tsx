@@ -33,14 +33,14 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
               >
                 View My Projects
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-5 py-3 text-sm font-semibold transition-colors hover:border-primary/50 hover:text-primary"
+                className="lift-hover inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-5 py-3 text-sm font-semibold hover:border-primary/50 hover:text-primary"
               >
                 Contact Me
               </a>
@@ -52,7 +52,7 @@ export function Hero() {
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+                className="lift-hover inline-flex items-center gap-2 hover:text-primary"
               >
                 <Github className="h-4 w-4" /> GitHub
               </a>
@@ -60,13 +60,13 @@ export function Hero() {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+                className="lift-hover inline-flex items-center gap-2 hover:text-primary"
               >
                 <Linkedin className="h-4 w-4" /> LinkedIn
               </a>
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+                className="lift-hover inline-flex items-center gap-2 hover:text-primary"
               >
                 <Mail className="h-4 w-4" /> Email
               </a>
@@ -78,7 +78,7 @@ export function Hero() {
         </div>
 
         <Reveal delay={200}>
-          <div className="glass-panel rounded-2xl p-1">
+          <div className="glass-panel float-slow rounded-2xl p-1">
             <div className="flex items-center gap-2 px-4 py-3">
               <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
               <span className="h-2.5 w-2.5 rounded-full bg-primary/60" />
@@ -115,7 +115,7 @@ export function Hero() {
               {coreSkills.map((s) => (
                 <span
                   key={s}
-                  className="rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground"
+                  className="badge-hover rounded-full border border-border px-3 py-1 font-mono text-[11px] text-muted-foreground hover:text-primary"
                 >
                   {s}
                 </span>

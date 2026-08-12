@@ -18,7 +18,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer noopener"
             aria-label="GitHub profile"
-            className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+            className="lift-hover grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground hover:border-primary/50 hover:text-primary"
           >
             <Github className="h-4 w-4" />
           </a>
@@ -27,14 +27,14 @@ export function Footer() {
             target="_blank"
             rel="noreferrer noopener"
             aria-label="LinkedIn profile"
-            className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+            className="lift-hover grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground hover:border-primary/50 hover:text-primary"
           >
             <Linkedin className="h-4 w-4" />
           </a>
           <a
             href={`mailto:${profile.email}`}
             aria-label="Send an email"
-            className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+            className="lift-hover grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground hover:border-primary/50 hover:text-primary"
           >
             <Mail className="h-4 w-4" />
           </a>
