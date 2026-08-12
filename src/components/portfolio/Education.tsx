@@ -8,7 +8,7 @@ export function Education() {
     <Section id="education" eyebrow="Education" title="Academic background">
       <ol className="relative space-y-5 border-l border-border pl-6">
         {education.map((item, i) => (
-          <Reveal key={item.school} delay={i * 70} as="li">
+          <Reveal key={item.school} delay={i * 130} as="li">
             <span
               className={`absolute -left-[7px] mt-6 h-3 w-3 rounded-full border-2 border-background ${
                 item.current ? "bg-primary" : "bg-border"

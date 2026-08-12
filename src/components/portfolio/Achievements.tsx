@@ -9,8 +9,8 @@ export function Achievements() {
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="space-y-5">
           {achievements.map((a, i) => (
-            <Reveal key={a.title} delay={i * 70}>
-              <div className="card-hover rounded-2xl border border-border bg-card/70 p-6">
+            <Reveal key={a.title} delay={i * 120}>
+              <div className="card-hover rounded-2xl border border-border bg-card/70 p-6 hover:scale-[1.01]">
                 <div className="flex items-start gap-4">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-primary/12 text-primary">
                     <Award className="h-5 w-5" />

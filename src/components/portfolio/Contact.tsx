@@ -31,7 +31,7 @@ export function Contact() {
   };
 
   const field =
-    "mt-2 w-full rounded-xl border border-input bg-background/60 px-4 py-3 text-sm outline-none transition-colors focus:border-primary";
+    "field-anim mt-2 w-full rounded-xl border border-input bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary";
 
   const details = [
     { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}` },
@@ -84,7 +84,7 @@ export function Contact() {
             </ul>
             <a
               href={`mailto:${profile.email}`}
-              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
             >
               <Mail className="h-4 w-4" /> Email Me
             </a>
@@ -149,7 +149,7 @@ export function Contact() {
 
             <button
               type="submit"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold transition-colors hover:border-primary/50 hover:text-primary"
+              className="lift-hover mt-6 inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold hover:border-primary/50 hover:text-primary"
             >
               <Send className="h-4 w-4" /> Send Message
             </button>

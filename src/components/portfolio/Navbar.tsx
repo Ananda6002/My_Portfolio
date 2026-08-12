@@ -16,8 +16,8 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-panel border-x-0 border-t-0" : "border-b border-transparent"
+      className={`nav-enter fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color,backdrop-filter] duration-500 ease-out ${
+        scrolled ? "glass-panel border-x-0 border-t-0 shadow-[var(--shadow-elevated)]" : "border-b border-transparent"
       }`}
     >
       <nav
@@ -33,7 +33,7 @@ export function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-3.5 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              className="nav-link rounded-full px-3.5 py-2 text-sm text-muted-foreground hover:text-foreground"
             >
               {item.label}
             </a>
@@ -56,14 +56,14 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div id="mobile-nav" className="glass-panel border-x-0 border-b-0 md:hidden">
+        <div id="mobile-nav" className="glass-panel rise-in border-x-0 border-b-0 md:hidden">
           <ul className="mx-auto flex max-w-6xl flex-col px-5 py-3 sm:px-8">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                  className="block rounded-lg px-3 py-3 text-sm text-muted-foreground transition-all duration-200 hover:translate-x-1 hover:bg-secondary hover:text-foreground"
                 >
                   {item.label}
                 </a>
