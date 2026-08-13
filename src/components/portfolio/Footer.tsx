@@ -25,7 +25,7 @@ export function Footer() {
           <a
             href={profile.linkedin}
             target="_blank"
-            rel="noreferrer noopener"
+            rel="noopener noreferrer"
             aria-label="LinkedIn profile"
             className="lift-hover grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground hover:border-primary/50 hover:text-primary"
           >
