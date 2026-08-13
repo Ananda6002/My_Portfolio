@@ -59,7 +59,7 @@ export function Hero() {
               <a
                 href={profile.linkedin}
                 target="_blank"
-                rel="noreferrer noopener"
+                rel="noopener noreferrer"
                 className="lift-hover inline-flex items-center gap-2 hover:text-primary"
               >
                 <Linkedin className="h-4 w-4" /> LinkedIn
