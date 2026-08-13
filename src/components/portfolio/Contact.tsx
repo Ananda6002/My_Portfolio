@@ -70,7 +70,7 @@ export function Contact() {
                     {d.href ? (
                       <a
                         href={d.href}
-                        {...(d.external ? { target: "_blank", rel: "noreferrer noopener" } : {})}
+                        {...(d.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                         className="block truncate text-sm transition-colors hover:text-primary"
                       >
                         {d.value}
