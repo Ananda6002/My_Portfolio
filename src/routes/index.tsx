@@ -41,7 +41,7 @@ export const Route = createFileRoute("/")({
           jobTitle: "Full-Stack Developer",
           email: "mailto:anandaj6002@gmail.com",
           address: { "@type": "PostalAddress", addressLocality: "Mangaluru", addressRegion: "Karnataka", addressCountry: "India" },
-          sameAs: ["https://github.com/Ananda6002", "https://linkedin.com/in/ananda-j-48b234293"],
+          sameAs: ["https://github.com/Ananda6002", "https://www.linkedin.com/in/ananda-j-48b234293/"],
         }),
       },
     ],
