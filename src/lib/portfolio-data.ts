@@ -7,7 +7,7 @@ export const profile = {
   phone: "8088821849",
   location: "Mangaluru, Karnataka, India",
   github: "https://github.com/Ananda6002",
-  linkedin: "https://linkedin.com/in/ananda-j-48b234293",
+  linkedin: "https://www.linkedin.com/in/ananda-j-48b234293/",
 };
 
 export const about = [
