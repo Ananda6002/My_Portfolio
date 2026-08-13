@@ -87,6 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Ananda — Full-Stack Developer" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Ananda | Full-Stack Developer" },
+      { name: "twitter:title", content: "Ananda | Full-Stack Developer" },
+      { property: "og:description", content: "Computer Science and Engineering student and Full-Stack Developer specializing in modern web application development using the MERN stack." },
+      { name: "twitter:description", content: "Computer Science and Engineering student and Full-Stack Developer specializing in modern web application development using the MERN stack." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8650e58eebca8a416a7ddf44aed7578d/id-preview-3952cb92--20620a63-8da0-4141-b9c4-696530eca3b6.lovable.app-1786598252268.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8650e58eebca8a416a7ddf44aed7578d/id-preview-3952cb92--20620a63-8da0-4141-b9c4-696530eca3b6.lovable.app-1786598252268.png" },
     ],
     links: [
       {
