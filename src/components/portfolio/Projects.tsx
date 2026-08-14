@@ -39,7 +39,7 @@ export function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="lift-hover inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium hover:border-primary/50 hover:text-primary"
+                  className="press lift-hover group/btn inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium hover:border-primary/50 hover:text-primary"
                 >
                   <Github className="h-4 w-4" /> GitHub
                 </a>
@@ -48,7 +48,7 @@ export function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
+                    className="press inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
                   >
                     <ExternalLink className="h-4 w-4" /> Live Demo
                   </a>
@@ -64,7 +64,7 @@ export function Projects() {
             href={profile.github}
             target="_blank"
             rel="noreferrer noopener"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-primary"
+            className="press group inline-flex items-center gap-2 text-sm font-medium text-primary"
           >
             More projects on GitHub
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
