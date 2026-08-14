@@ -1,6 +1,7 @@
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/portfolio-data";
+import resumeAsset from "@/assets/Ananda_Resume.pdf.asset.json";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
@@ -41,6 +42,14 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          <a
+            href={resumeAsset.url}
+            download="Ananda_Resume.pdf"
+            className="group hidden items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-primary hover:shadow-[var(--shadow-glow)] sm:inline-flex"
+          >
+            <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+            Download Resume
+          </a>
           <ThemeToggle />
           <button
             type="button"
@@ -69,6 +78,17 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="pt-2">
+              <a
+                href={resumeAsset.url}
+                download="Ananda_Resume.pdf"
+                onClick={() => setOpen(false)}
+                className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-4 py-2.5 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary"
+              >
+                <Download className="h-4 w-4" />
+                Download Resume
+              </a>
+            </li>
           </ul>
         </div>
       )}
