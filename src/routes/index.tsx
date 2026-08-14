@@ -60,6 +60,7 @@ function Index() {
         <Skills />
         <Projects />
         <Education />
+        <Certifications />
         <Achievements />
         <Contact />
       </main>
