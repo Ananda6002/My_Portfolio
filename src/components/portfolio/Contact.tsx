@@ -71,7 +71,7 @@ export function Contact() {
                       <a
                         href={d.href}
                         {...(d.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                        className="block truncate text-sm transition-colors hover:text-primary"
+                        className="press inline-block max-w-full truncate text-sm hover:text-primary"
                       >
                         {d.value}
                       </a>
@@ -84,7 +84,7 @@ export function Contact() {
             </ul>
             <a
               href={`mailto:${profile.email}`}
-              className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
+              className="press mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
             >
               <Mail className="h-4 w-4" /> Email Me
             </a>
@@ -149,7 +149,7 @@ export function Contact() {
 
             <button
               type="submit"
-              className="lift-hover mt-6 inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold hover:border-primary/50 hover:text-primary"
+              className="press lift-hover mt-6 inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold hover:border-primary/50 hover:text-primary"
             >
               <Send className="h-4 w-4" /> Send Message
             </button>
