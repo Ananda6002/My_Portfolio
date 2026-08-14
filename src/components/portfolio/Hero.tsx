@@ -1,5 +1,6 @@
-import { ArrowRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Download, Eye, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { profile, coreSkills } from "@/lib/portfolio-data";
+import resumeAsset from "@/assets/Ananda_Resume.pdf.asset.json";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
