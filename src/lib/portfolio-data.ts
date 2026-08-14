@@ -1,3 +1,15 @@
+import skillSangamAsset from "@/assets/Skill_Sangam_2K25_Certificate.pdf.asset.json";
+import javascriptAsset from "@/assets/Mastering_JavaScript_Certificate.pdf.asset.json";
+import pythonAsset from "@/assets/Python_Foundation_Certificate.pdf.asset.json";
+import javaAsset from "@/assets/Java_Foundation_Certificate.pdf.asset.json";
+
+const certificateFiles = {
+  skillSangam: skillSangamAsset.url,
+  javascript: javascriptAsset.url,
+  python: pythonAsset.url,
+  java: javaAsset.url,
+};
+
 export const profile = {
   name: "Ananda",
   title: "Full-Stack Developer | MERN Stack | Building Modern Web Applications",
