@@ -42,6 +42,14 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-2">
+          <a
+            href={resumeAsset.url}
+            download="Ananda_Resume.pdf"
+            className="group hidden items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-4 py-2 text-sm font-semibold text-primary transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-primary hover:shadow-[var(--shadow-glow)] sm:inline-flex"
+          >
+            <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+            Download Resume
+          </a>
           <ThemeToggle />
           <button
             type="button"
