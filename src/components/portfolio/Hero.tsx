@@ -40,12 +40,28 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
+                href={resumeAsset.url}
+                download="Ananda_Resume.pdf"
+                className="lift-hover group inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-5 py-3 text-sm font-semibold text-primary hover:border-primary hover:shadow-[var(--shadow-glow)]"
+              >
+                <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                Download Resume
+              </a>
+              <a
                 href="#contact"
                 className="lift-hover inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-5 py-3 text-sm font-semibold hover:border-primary/50 hover:text-primary"
               >
                 Contact Me
               </a>
             </div>
+            <a
+              href={resumeAsset.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-primary"
+            >
+              <Eye className="h-3.5 w-3.5" /> View Resume
+            </a>
           </Reveal>
           <Reveal delay={320}>
             <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
