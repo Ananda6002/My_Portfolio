@@ -92,12 +92,60 @@ export const achievements = [
     description:
       "Successfully completed a 24-hour hackathon focused on full-stack web development using the MERN stack, Next.js and Generative AI.",
   },
+  {
+    title: "ServiceTracker — Developed, Deployed & Hosted",
+    description:
+      "Successfully developed, deployed, and hosted ServiceTracker, a MERN-based full-stack web application, making it publicly accessible for users.",
+  },
 ];
 
-export const certifications = [
-  "Mastering JavaScript — Infosys Springboard",
-  "Python Foundation Certification — Infosys Springboard",
-  "Java Foundation Certification — Infosys Springboard",
+export type Certification = {
+  title: string;
+  program?: string;
+  issuer: string;
+  date: string;
+  details?: string[];
+  tech?: string[];
+  file?: string;
+  filename?: string;
+};
+
+export const certifications: Certification[] = [
+  {
+    title: "Certificate of Achievement",
+    program: "Skill Sangam 2K25 — Full Stack Course",
+    issuer:
+      "Technical Career Education in collaboration with Sahyadri College of Engineering and Management",
+    date: "2nd – 3rd June 2025",
+    details: [
+      "Successfully completed the Full Stack Course by participating in Skill Sangam 2025.",
+      "24-hour Hackathon working on full-stack web application development.",
+    ],
+    tech: ["MERN Stack", "Next.js", "Generative AI"],
+    file: certificateFiles.skillSangam,
+    filename: "Skill_Sangam_2K25_Certificate.pdf",
+  },
+  {
+    title: "Mastering JavaScript",
+    issuer: "Infosys Springboard",
+    date: "May 2025",
+    file: certificateFiles.javascript,
+    filename: "Mastering_JavaScript_Certificate.pdf",
+  },
+  {
+    title: "Python Foundation Certification",
+    issuer: "Infosys Springboard",
+    date: "June 2025",
+    file: certificateFiles.python,
+    filename: "Python_Foundation_Certificate.pdf",
+  },
+  {
+    title: "Java Foundation Certification",
+    issuer: "Infosys Springboard",
+    date: "December 2024",
+    file: certificateFiles.java,
+    filename: "Java_Foundation_Certificate.pdf",
+  },
 ];
 
 export const navItems = [
@@ -105,6 +153,7 @@ export const navItems = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ];
