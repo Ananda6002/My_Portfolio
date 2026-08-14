@@ -78,6 +78,17 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="pt-2">
+              <a
+                href={resumeAsset.url}
+                download="Ananda_Resume.pdf"
+                onClick={() => setOpen(false)}
+                className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-4 py-2.5 text-sm font-semibold text-primary transition-all duration-300 hover:border-primary"
+              >
+                <Download className="h-4 w-4" />
+                Download Resume
+              </a>
+            </li>
           </ul>
         </div>
       )}
