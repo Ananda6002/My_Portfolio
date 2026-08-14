@@ -1,6 +1,7 @@
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/portfolio-data";
+import resumeAsset from "@/assets/Ananda_Resume.pdf.asset.json";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
