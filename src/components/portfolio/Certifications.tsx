@@ -1,4 +1,4 @@
-import { BadgeCheck, Calendar, Download, Eye } from "lucide-react";
+import { BadgeCheck, Calendar, Eye } from "lucide-react";
 import { certifications } from "@/lib/portfolio-data";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
@@ -66,14 +66,6 @@ export function Certifications() {
                     className="press inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:shadow-[var(--shadow-glow)]"
                   >
                     <Eye className="h-4 w-4" /> View Certificate
-                  </a>
-                  <a
-                    href={c.file}
-                    download={c.filename}
-                    className="press group inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium hover:border-primary/50 hover:text-primary"
-                  >
-                    <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
-                    Download Certificate
                   </a>
                 </div>
               )}

@@ -94,8 +94,12 @@ export const education = [
     years: "2023 – Present",
     current: true,
   },
-  { school: "Pre-University (12th)", degree: "Higher Secondary", detail: "83.33%", years: "" },
-  { school: "Secondary School (10th)", degree: "SSLC", detail: "88%", years: "" },
+  {
+    school: "SDM PU College, Ujire",
+    degree: "Higher Secondary",
+    detail: "83.33%",
+    years: "2021 – 2023",
+  },
 ];
 
 export const achievements = [
