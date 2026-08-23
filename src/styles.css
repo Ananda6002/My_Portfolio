@@ -156,9 +156,9 @@
 
 @utility grid-backdrop {
   background-image:
-    radial-gradient(circle at 18% 8%, color-mix(in oklab, var(--color-primary) 7%, transparent), transparent 42%),
-    linear-gradient(to right, color-mix(in oklab, var(--color-border) 30%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--color-border) 30%, transparent) 1px, transparent 1px);
+    radial-gradient(circle at 18% 8%, color-mix(in oklab, var(--color-primary) 5%, transparent), transparent 42%),
+    linear-gradient(to right, color-mix(in oklab, var(--color-border) 18%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-border) 18%, transparent) 1px, transparent 1px);
   background-size:
     100% 100%,
     56px 56px,
