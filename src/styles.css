@@ -6,7 +6,7 @@
 
 /*
  * Design system — "Creative Developer" portfolio.
- * Dark-first, teal/cyan accent, glass surfaces, mono accents.
+ * Dark-first, charcoal + violet/lavender accent, glass surfaces, mono accents.
  */
 
 @theme inline {
@@ -45,55 +45,56 @@
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.16 0.022 250);
-  --foreground: oklch(0.96 0.006 250);
-  --card: oklch(0.2 0.024 252);
-  --card-foreground: oklch(0.96 0.006 250);
-  --popover: oklch(0.2 0.024 252);
-  --popover-foreground: oklch(0.96 0.006 250);
-  --primary: oklch(0.79 0.135 183);
-  --primary-foreground: oklch(0.18 0.03 220);
-  --secondary: oklch(0.26 0.03 252);
-  --secondary-foreground: oklch(0.96 0.006 250);
-  --muted: oklch(0.24 0.026 252);
-  --muted-foreground: oklch(0.71 0.022 250);
-  --accent: oklch(0.72 0.13 235);
-  --accent-foreground: oklch(0.16 0.022 250);
+  --background: #09090b;
+  --foreground: #f5f3ff;
+  --card: #111116;
+  --card-foreground: #f5f3ff;
+  --popover: #111116;
+  --popover-foreground: #f5f3ff;
+  --primary: #a78bfa;
+  --primary-foreground: #0a0a0f;
+  --secondary: #18181d;
+  --secondary-foreground: #f5f3ff;
+  --muted: #16161b;
+  --muted-foreground: #a1a1aa;
+  --accent: #8b5cf6;
+  --accent-foreground: #f5f3ff;
   --destructive: oklch(0.62 0.2 22);
-  --destructive-foreground: oklch(0.98 0.005 250);
-  --border: oklch(0.32 0.026 252);
-  --input: oklch(0.3 0.026 252);
-  --ring: oklch(0.79 0.135 183);
-  --surface: oklch(0.22 0.025 252 / 60%);
-  --glow: oklch(0.79 0.135 183 / 22%);
-  --gradient-accent: linear-gradient(120deg, var(--primary), var(--accent));
-  --shadow-elevated: 0 24px 60px -28px oklch(0 0 0 / 60%);
-  --shadow-glow: 0 0 0 1px var(--glow), 0 22px 50px -24px var(--glow);
+  --destructive-foreground: #f5f3ff;
+  --border: #27272a;
+  --input: #3f3f46;
+  --ring: #a78bfa;
+  --surface: color-mix(in oklab, #111116 82%, transparent);
+  --glow: color-mix(in oklab, #8b5cf6 18%, transparent);
+  --gradient-accent: linear-gradient(120deg, #a78bfa, #8b5cf6);
+  --shadow-elevated: 0 24px 60px -28px oklch(0 0 0 / 70%);
+  --shadow-glow: 0 0 0 1px var(--glow), 0 22px 50px -26px var(--glow);
 }
 
 .light {
-  --background: oklch(0.985 0.004 240);
-  --foreground: oklch(0.2 0.026 250);
+  --background: oklch(0.985 0.003 300);
+  --foreground: #18181b;
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.026 250);
+  --card-foreground: #18181b;
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.026 250);
-  --primary: oklch(0.52 0.11 195);
-  --primary-foreground: oklch(0.99 0.003 240);
-  --secondary: oklch(0.94 0.008 240);
-  --secondary-foreground: oklch(0.24 0.026 250);
-  --muted: oklch(0.95 0.006 240);
-  --muted-foreground: oklch(0.48 0.02 250);
-  --accent: oklch(0.55 0.13 245);
-  --accent-foreground: oklch(0.99 0.003 240);
-  --border: oklch(0.9 0.008 240);
-  --input: oklch(0.88 0.01 240);
-  --ring: oklch(0.52 0.11 195);
+  --popover-foreground: #18181b;
+  --primary: #6d28d9;
+  --primary-foreground: oklch(0.99 0.003 300);
+  --secondary: oklch(0.945 0.006 300);
+  --secondary-foreground: #27272a;
+  --muted: oklch(0.955 0.005 300);
+  --muted-foreground: #52525b;
+  --accent: #7c3aed;
+  --accent-foreground: oklch(0.99 0.003 300);
+  --border: oklch(0.9 0.007 300);
+  --input: oklch(0.88 0.009 300);
+  --ring: #6d28d9;
   --surface: oklch(1 0 0 / 70%);
-  --glow: oklch(0.52 0.11 195 / 16%);
-  --shadow-elevated: 0 20px 50px -30px oklch(0.3 0.04 250 / 35%);
+  --glow: color-mix(in oklab, #6d28d9 14%, transparent);
+  --shadow-elevated: 0 20px 50px -30px oklch(0.25 0.04 300 / 35%);
   --shadow-glow: 0 0 0 1px var(--glow), 0 18px 40px -26px var(--glow);
 }
+
 
 @layer base {
   * {
@@ -155,14 +156,15 @@
 
 @utility grid-backdrop {
   background-image:
-    radial-gradient(circle at 15% 10%, var(--glow), transparent 45%),
-    linear-gradient(to right, color-mix(in oklab, var(--color-border) 55%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--color-border) 55%, transparent) 1px, transparent 1px);
+    radial-gradient(circle at 18% 8%, color-mix(in oklab, var(--color-primary) 7%, transparent), transparent 42%),
+    linear-gradient(to right, color-mix(in oklab, var(--color-border) 30%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-border) 30%, transparent) 1px, transparent 1px);
   background-size:
     100% 100%,
     56px 56px,
     56px 56px;
 }
+
 
 @utility reveal {
   opacity: 0;
