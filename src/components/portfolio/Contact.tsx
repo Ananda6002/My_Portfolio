@@ -167,24 +167,41 @@ export function Contact() {
 
             <button
               type="submit"
-              className="press lift-hover mt-6 inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold hover:border-primary/50 hover:text-primary"
+              disabled={status === "sending"}
+              aria-busy={status === "sending"}
+              className="press lift-hover mt-6 inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold hover:border-primary/50 hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
             >
-              <Send className="h-4 w-4" /> Send Message
+              {status === "sending" ? (
+                <>
+                  <Loader2 className="h-4 w-4 animate-spin" /> Sending...
+                </>
+              ) : (
+                <>
+                  <Send className="h-4 w-4" /> Send Message
+                </>
+              )}
             </button>
 
-            {status === "ready" && (
-              <p className="mt-4 rounded-xl border border-primary/40 bg-primary/8 p-4 text-sm text-muted-foreground" role="status">
-                Your details look good. This form isn&apos;t connected to an email service yet, so
-                please send the message directly to{" "}
+            {status === "success" && (
+              <p
+                className="mt-4 rounded-xl border border-primary/40 bg-primary/8 p-4 text-sm text-muted-foreground"
+                role="status"
+              >
+                Message sent successfully! I&apos;ll get back to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p
+                className="mt-4 rounded-xl border border-destructive/40 bg-destructive/8 p-4 text-sm text-muted-foreground"
+                role="alert"
+              >
+                Unable to send your message. Please try again or contact me directly by email at{" "}
                 <a href={`mailto:${profile.email}`} className="text-primary underline">
                   {profile.email}
                 </a>
-                . An email integration can be connected later.
+                .
               </p>
             )}
-            <p className="mt-4 text-xs text-muted-foreground">
-              Note: no email backend is connected yet — messages are validated only.
-            </p>
           </form>
         </Reveal>
       </div>
