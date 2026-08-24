@@ -96,9 +96,15 @@ export const education = [
   },
   {
     school: "SDM PU College, Ujire",
-    degree: "Higher Secondary",
-    detail: "83.33%",
+    degree: "Pre-University / 12th",
+    detail: "Percentage: 83.33%",
     years: "2021 – 2023",
+  },
+  {
+    school: "Sacred Heart High-School, Madanthyar",
+    degree: "SSLC / 10th",
+    detail: "Percentage: 88%",
+    years: "2021",
   },
 ];
 
