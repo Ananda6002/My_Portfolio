@@ -1,6 +1,8 @@
-import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Github, Linkedin, Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
 import { profile } from "@/lib/portfolio-data";
+import { submitContactMessage } from "@/lib/contact.functions";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
 
@@ -9,7 +11,8 @@ type Errors = { name?: string; email?: string; message?: string };
 export function Contact() {
   const [values, setValues] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Errors>({});
-  const [status, setStatus] = useState<"idle" | "ready">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const send = useServerFn(submitContactMessage);
 
   const validate = () => {
     const next: Errors = {};
@@ -21,13 +24,28 @@ export function Contact() {
     return Object.keys(next).length === 0;
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (status === "sending") return;
     if (!validate()) {
       setStatus("idle");
       return;
     }
-    setStatus("ready");
+    setStatus("sending");
+    try {
+      await send({
+        data: {
+          name: values.name.trim(),
+          email: values.email.trim(),
+          message: values.message.trim(),
+        },
+      });
+      setValues({ name: "", email: "", message: "" });
+      setStatus("success");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
   };
 
   const field =
