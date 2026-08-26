@@ -11,7 +11,7 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
 
-const title = "Ananda | Full-Stack Developer";
+const title = "Ananda J | Full-Stack Developer";
 const description =
   "Computer Science and Engineering student and Full-Stack Developer specializing in modern web application development using the MERN stack.";
 

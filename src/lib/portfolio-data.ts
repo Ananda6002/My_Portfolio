@@ -1,13 +1,8 @@
-import skillSangamAsset from "@/assets/Skill_Sangam_2K25_Certificate.pdf.asset.json";
-import javascriptAsset from "@/assets/Mastering_JavaScript_Certificate.pdf.asset.json";
-import pythonAsset from "@/assets/Python_Foundation_Certificate.pdf.asset.json";
-import javaAsset from "@/assets/Java_Foundation_Certificate.pdf.asset.json";
-
 const certificateFiles = {
-  skillSangam: skillSangamAsset.url,
-  javascript: javascriptAsset.url,
-  python: pythonAsset.url,
-  java: javaAsset.url,
+  skillSangam: "/certificates/Skill_Sangam_2K25_Certificate.pdf",
+  javascript: "/certificates/Mastering_JavaScript_Certificate.pdf",
+  python: "/certificates/Python_Foundation_Certificate.pdf",
+  java: "/certificates/Java_Foundation_Certificate.pdf",
 };
 
 export const profile = {
@@ -130,6 +125,7 @@ export type Certification = {
   tech?: string[];
   file?: string;
   filename?: string;
+  viewerPath?: string;
 };
 
 export const certifications: Certification[] = [
@@ -146,6 +142,7 @@ export const certifications: Certification[] = [
     tech: ["MERN Stack", "Next.js", "Generative AI"],
     file: certificateFiles.skillSangam,
     filename: "Skill_Sangam_2K25_Certificate.pdf",
+    viewerPath: "/certificates/skill-sangam",
   },
   {
     title: "Mastering JavaScript",
@@ -153,6 +150,7 @@ export const certifications: Certification[] = [
     date: "May 2025",
     file: certificateFiles.javascript,
     filename: "Mastering_JavaScript_Certificate.pdf",
+    viewerPath: "/certificates/javascript",
   },
   {
     title: "Python Foundation Certification",
@@ -160,6 +158,7 @@ export const certifications: Certification[] = [
     date: "June 2025",
     file: certificateFiles.python,
     filename: "Python_Foundation_Certificate.pdf",
+    viewerPath: "/certificates/python",
   },
   {
     title: "Java Foundation Certification",
@@ -167,6 +166,7 @@ export const certifications: Certification[] = [
     date: "December 2024",
     file: certificateFiles.java,
     filename: "Java_Foundation_Certificate.pdf",
+    viewerPath: "/certificates/java",
   },
 ];
 

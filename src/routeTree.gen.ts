@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ResumeRouteImport } from './routes/resume'
+import { Route as CertificatesJavaRouteImport } from './routes/certificates.java'
+import { Route as CertificatesJavascriptRouteImport } from './routes/certificates.javascript'
+import { Route as CertificatesPythonRouteImport } from './routes/certificates.python'
+import { Route as CertificatesSkillSangamRouteImport } from './routes/certificates.skill-sangam'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResumeRoute = ResumeRouteImport.update({
+  id: '/resume',
+  path: '/resume',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificatesJavaRoute = CertificatesJavaRouteImport.update({
+  id: '/certificates/java',
+  path: '/certificates/java',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificatesJavascriptRoute = CertificatesJavascriptRouteImport.update({
+  id: '/certificates/javascript',
+  path: '/certificates/javascript',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificatesPythonRoute = CertificatesPythonRouteImport.update({
+  id: '/certificates/python',
+  path: '/certificates/python',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificatesSkillSangamRoute = CertificatesSkillSangamRouteImport.update({
+  id: '/certificates/skill-sangam',
+  path: '/certificates/skill-sangam',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/resume': typeof ResumeRoute
+  '/certificates/java': typeof CertificatesJavaRoute
+  '/certificates/javascript': typeof CertificatesJavascriptRoute
+  '/certificates/python': typeof CertificatesPythonRoute
+  '/certificates/skill-sangam': typeof CertificatesSkillSangamRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/resume': typeof ResumeRoute
+  '/certificates/java': typeof CertificatesJavaRoute
+  '/certificates/javascript': typeof CertificatesJavascriptRoute
+  '/certificates/python': typeof CertificatesPythonRoute
+  '/certificates/skill-sangam': typeof CertificatesSkillSangamRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/resume': typeof ResumeRoute
+  '/certificates/java': typeof CertificatesJavaRoute
+  '/certificates/javascript': typeof CertificatesJavascriptRoute
+  '/certificates/python': typeof CertificatesPythonRoute
+  '/certificates/skill-sangam': typeof CertificatesSkillSangamRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/resume'
+    | '/certificates/java'
+    | '/certificates/javascript'
+    | '/certificates/python'
+    | '/certificates/skill-sangam'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/resume'
+    | '/certificates/java'
+    | '/certificates/javascript'
+    | '/certificates/python'
+    | '/certificates/skill-sangam'
+  id:
+    | '__root__'
+    | '/'
+    | '/resume'
+    | '/certificates/java'
+    | '/certificates/javascript'
+    | '/certificates/python'
+    | '/certificates/skill-sangam'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ResumeRoute: typeof ResumeRoute
+  CertificatesJavaRoute: typeof CertificatesJavaRoute
+  CertificatesJavascriptRoute: typeof CertificatesJavascriptRoute
+  CertificatesPythonRoute: typeof CertificatesPythonRoute
+  CertificatesSkillSangamRoute: typeof CertificatesSkillSangamRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resume': {
+      id: '/resume'
+      path: '/resume'
+      fullPath: '/resume'
+      preLoaderRoute: typeof ResumeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates/java': {
+      id: '/certificates/java'
+      path: '/certificates/java'
+      fullPath: '/certificates/java'
+      preLoaderRoute: typeof CertificatesJavaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates/javascript': {
+      id: '/certificates/javascript'
+      path: '/certificates/javascript'
+      fullPath: '/certificates/javascript'
+      preLoaderRoute: typeof CertificatesJavascriptRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates/python': {
+      id: '/certificates/python'
+      path: '/certificates/python'
+      fullPath: '/certificates/python'
+      preLoaderRoute: typeof CertificatesPythonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates/skill-sangam': {
+      id: '/certificates/skill-sangam'
+      path: '/certificates/skill-sangam'
+      fullPath: '/certificates/skill-sangam'
+      preLoaderRoute: typeof CertificatesSkillSangamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ResumeRoute: ResumeRoute,
+  CertificatesJavaRoute: CertificatesJavaRoute,
+  CertificatesJavascriptRoute: CertificatesJavascriptRoute,
+  CertificatesPythonRoute: CertificatesPythonRoute,
+  CertificatesSkillSangamRoute: CertificatesSkillSangamRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

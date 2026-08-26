@@ -1,6 +1,5 @@
 import { ArrowRight, Download, Eye, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { profile, coreSkills } from "@/lib/portfolio-data";
-import resumeAsset from "@/assets/Ananda_Resume.pdf.asset.json";
 import { Reveal } from "./Reveal";
 
 export function Hero() {
@@ -40,7 +39,7 @@ export function Hero() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
-                href={resumeAsset.url}
+                href="/resume.pdf"
                 download="Ananda_Resume.pdf"
                 className="press lift-hover group inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-5 py-3 text-sm font-semibold text-primary hover:border-primary hover:shadow-[var(--shadow-glow)]"
               >
@@ -55,7 +54,7 @@ export function Hero() {
               </a>
             </div>
             <a
-              href={resumeAsset.url}
+              href="/resume"
               target="_blank"
               rel="noopener noreferrer"
               className="press mt-3 inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-primary"

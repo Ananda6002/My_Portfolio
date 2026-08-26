@@ -57,10 +57,10 @@ export function Certifications() {
                 <Calendar className="h-3.5 w-3.5" /> {c.date}
               </p>
 
-              {c.file && (
+              {c.viewerPath && (
                 <div className="mt-auto flex flex-wrap gap-3 pt-6">
                   <a
-                    href={c.file}
+                    href={c.viewerPath}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="press inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:shadow-[var(--shadow-glow)]"

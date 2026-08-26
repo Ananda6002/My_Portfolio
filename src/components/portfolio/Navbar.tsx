@@ -1,7 +1,6 @@
 import { Download, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/portfolio-data";
-import resumeAsset from "@/assets/Ananda_Resume.pdf.asset.json";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
@@ -66,7 +65,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <a
-            href={resumeAsset.url}
+            href="/resume.pdf"
             download="Ananda_Resume.pdf"
             className="press group hidden items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-4 py-2 text-sm font-semibold text-primary hover:border-primary hover:shadow-[var(--shadow-glow)] sm:inline-flex"
           >
@@ -105,7 +104,7 @@ export function Navbar() {
             ))}
             <li className="pt-2">
               <a
-                href={resumeAsset.url}
+                href="/resume.pdf"
                 download="Ananda_Resume.pdf"
                 onClick={() => setOpen(false)}
                 className="press inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card/60 px-4 py-2.5 text-sm font-semibold text-primary hover:border-primary"
