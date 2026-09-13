@@ -5,7 +5,6 @@ My personal portfolio website showcasing my projects, technical skills, educatio
 ## 🌐 [Live Portfolio](https://my-portfolio-ten-kappa-bss1fwfxsd.vercel.app)
 
 
-
 ## 🛠️ Tech Stack
 
 - React.js
