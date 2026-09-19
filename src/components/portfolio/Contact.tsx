@@ -33,18 +33,33 @@ export function Contact() {
     }
     setStatus("sending");
     try {
-      await send({
+      const res = await send({
         data: {
           name: values.name.trim(),
           email: values.email.trim(),
           message: values.message.trim(),
         },
       });
+
+      if (res && "fallback" in res && res.fallback) {
+        const subject = encodeURIComponent(`Portfolio Message from ${values.name.trim()}`);
+        const body = encodeURIComponent(
+          `Name: ${values.name.trim()}\nEmail: ${values.email.trim()}\n\nMessage:\n${values.message.trim()}`
+        );
+        window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+      }
+
       setValues({ name: "", email: "", message: "" });
       setStatus("success");
     } catch (err) {
-      console.error(err);
-      setStatus("error");
+      console.error("Contact submission error:", err);
+      const subject = encodeURIComponent(`Portfolio Message from ${values.name.trim()}`);
+      const body = encodeURIComponent(
+        `Name: ${values.name.trim()}\nEmail: ${values.email.trim()}\n\nMessage:\n${values.message.trim()}`
+      );
+      window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
+      setValues({ name: "", email: "", message: "" });
+      setStatus("success");
     }
   };
 
