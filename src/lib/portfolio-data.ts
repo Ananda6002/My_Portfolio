@@ -66,18 +66,18 @@ export const projects: Project[] = [
     github: "https://github.com/Ananda6002/complaint-management-system.git",
   },
   {
-    name: "NexCart E-Commerce",
+    name: "LifeAssist",
     description:
-      "An e-commerce web application covering product listings, cart flow and order handling with a responsive interface.",
-    tech: ["MERN Stack", "React.js", "Express.js", "MongoDB"],
-    github: "https://github.com/Ananda6002/nexcart_ecommerce.git",
+      "An AI-powered everyday problem-solving and local service platform connecting customers with verified local service providers.",
+    tech: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "Socket.IO"],
+    github: "https://github.com/Ananda6002/life_assist.git",
   },
   {
-    name: "Feastly",
+    name: "Fake Review Detector",
     description:
-      "A food-focused web application built as a full-stack learning project. Detailed description to be added.",
-    tech: ["JavaScript", "Full-Stack"],
-    github: "https://github.com/Ananda6002/feastly.git",
+      "An AI-powered NLP classification system that detects fake and suspicious product reviews using machine learning models, text preprocessing, and custom heuristic signals.",
+    tech: ["Python", "FastAPI", "NLP", "Scikit-Learn", "Machine Learning"],
+    github: "https://github.com/Ananda6002/Fake_review_detector.git",
   },
 ];
 
@@ -85,6 +85,7 @@ export const education = [
   {
     school: "Sahyadri College of Engineering and Management, Mangalore",
     degree: "B.E. in Computer Science & Engineering",
+    focus: "Specialized in Full-Stack Web Development, Data Structures, Algorithms, and Software Engineering principles.",
     detail: "CGPA: 8.4",
     years: "2023 – Present",
     current: true,
@@ -92,12 +93,14 @@ export const education = [
   {
     school: "SDM PU College, Ujire",
     degree: "Pre-University / 12th",
+    focus: "Physics, Chemistry, Mathematics, and Biology (PCMB) Science Stream.",
     detail: "Percentage: 83.33%",
     years: "2021 – 2023",
   },
   {
     school: "Sacred Heart High-School, Madanthyar",
     degree: "SSLC / 10th",
+    focus: "General Secondary Education with a strong foundation in Mathematics and Science.",
     detail: "Percentage: 88%",
     years: "2021",
   },

@@ -26,6 +26,9 @@ export function Education() {
                 <div className="min-w-0">
                   <h3 className="text-lg font-semibold">{item.degree}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{item.school}</p>
+                  {item.focus && (
+                    <p className="mt-2 text-xs leading-relaxed text-muted-foreground/80">{item.focus}</p>
+                  )}
                 </div>
                 <GraduationCap className="h-5 w-5 shrink-0 text-primary" />
               </div>
