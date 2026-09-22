@@ -22,3 +22,7 @@ My personal portfolio website showcasing my projects, technical skills, educatio
 - GitHub & LinkedIn integration
 - Smooth animations
 - Dark/Light mode
+
+## 📌 About
+
+This portfolio is designed to provide a simple and professional overview of my development journey, technical skills, and projects, while making it easy to explore my work and connect with me.
